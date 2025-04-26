@@ -133,7 +133,7 @@ header {
    background-image: url(images/All-Mr.-Olympia-Winners.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: center;
+   background-position: center center;
    background-position: 100% 35%;
 }
 
@@ -250,17 +250,17 @@ footer a:hover {
 .social-btns .btn,
 .social-btns .btn:before,
 .social-btns .btn .fa {
-  transition: all 0.35s;
-  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+   transition: all 0.35s;
+   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
 
 .social-btns .btn:before {
-  top: 90%;
-  left: -110%;
+   top: 90%;
+   left: -110%;
 }
 
 .social-btns .btn .fa {
-  transform: scale(0.8);
+   transform: scale(0.8);
 }
 
 
@@ -268,11 +268,13 @@ footer a:hover {
 /* Instagram
 -------------------------------------*/
 .social-btns .btn.instagram:before {
-  background-color: #bf00ff; /* hover color */
+   background-color: #bf00ff;
+   /* hover color */
 }
 
 .social-btns .btn.instagram .fa {
-  color: #bf00ff; /* logo color */
+   color: #bf00ff;
+   /* logo color */
 }
 
 
@@ -280,52 +282,58 @@ footer a:hover {
 /* CONTAINER AREA
 -------------------------------------*/
 
-.social-btns { /* area that holds buttons */
-  font-size: 0;
-  text-align: center;
-  max-width: 100%;
+.social-btns {
+   /* area that holds buttons */
+   font-size: 0;
+   text-align: center;
+   max-width: 100%;
 }
 
 
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
-  top: -10%;
-  left: -10%;
+   top: -10%;
+   left: -10%;
 }
 
 .social-btns .btn:focus .fa,
 .social-btns .btn:hover .fa {
-  color: #fff;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+   color: #fff;
+   -webkit-transform: scale(1);
+   transform: scale(1);
 }
 
 .social-btns .btn {
-  display: inline-block;
-  background-color: white;
-  width: 3rem; /* size of buttons */
-  height: 3rem; /* size of buttons */
-  margin: 1px 10px; /* space between buttons */
-  line-height: 3rem; /* vertical placement inside button */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 30%;
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
-  opacity: 0.99;
+   display: inline-block;
+   background-color: white;
+   width: 3rem;
+   /* size of buttons */
+   height: 3rem;
+   /* size of buttons */
+   margin: 1px 10px;
+   /* space between buttons */
+   line-height: 3rem;
+   /* vertical placement inside button */
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+   border-radius: 30%;
+   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+   opacity: 0.99;
 }
 
 .social-btns .btn:before {
-  content: "";
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  transform: rotate(45deg);
+   content: "";
+   width: 120%;
+   height: 120%;
+   position: absolute;
+   transform: rotate(45deg);
 }
 
 .social-btns .btn .fa {
-  font-size: 2rem; /*size of logo inside button */
-  vertical-align: middle;
+   font-size: 2rem;
+   /*size of logo inside button */
+   vertical-align: middle;
 }
 
 
@@ -335,6 +343,16 @@ footer a:hover {
    .grids,
    .divisions {
       grid-template-columns: 1fr;
+   }
+
+   .divisions {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0rem;
+   }
+
+   .divisions h2 {
+      padding: 1rem 2rem;
    }
 
    .grids {
@@ -357,11 +375,7 @@ footer a:hover {
 
    header {
       font-size: 100%;
-   }
-
-   .divisions {
-      display: flex;
-      flex-direction: column;
+      background-position: center center;
    }
 
    p,
@@ -372,8 +386,15 @@ footer a:hover {
    }
 
    header h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
    }
+
+   .typing-demo {
+      animation: none !important;
+      border-right: none !important;
+   }
+
+      
 
    h2 {
       font-size: 1.8rem;
