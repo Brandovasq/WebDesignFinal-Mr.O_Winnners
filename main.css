@@ -1,0 +1,385 @@
+body {
+   background-color: beige;
+   background-image: url(images/seamless_metal_texture_by_hhh316_d30x412-fullview.jpg);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-family: "Oswald", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+}
+
+/* Nav bar */
+
+nav {
+   background-color: #DE1A1A;
+   padding: 0.5em;
+   text-transform: uppercase;
+   /* border-radius: 2em; */
+   font-size: 100%;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+nav li {
+   list-style-type: none;
+   padding: 1rem;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+   padding: 1rem 2rem;
+   /* border: ; */
+}
+
+/* nav bar hover over effects */
+
+nav ul {
+   display: flex;
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+}
+
+nav ul:hover li:not(:hover) a {
+   opacity: 0.2;
+}
+
+nav ul li {
+   position: relative;
+   cursor: pointer;
+}
+
+nav ul li::after {
+   position: absolute;
+   content: "";
+   top: 80%;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background-color: brown;
+   transform: scaleX(0);
+   transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav ul li:hover::after,
+ul li.active::after {
+   transform: scaleX(.7);
+}
+
+nav ul li a {
+   position: relative;
+   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav a:hover {
+   background-color: black;
+   border-radius: 0.5em;
+   color: brown;
+}
+
+/* pictures */
+
+main img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+   border-radius: 1rem;
+   border: 2px inset gray;
+}
+
+.divisions img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+.grids {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1.5rem;
+}
+
+.wrapper {
+   max-width: 960px;
+   margin: 0.5em auto;
+   background-color: white;
+   border: 3px solid dimgray;
+   box-shadow: 5px 5px 20px black;
+   border-radius: 0.5em;
+   font-size: 135%;
+}
+
+/* Header, including logo and background image */
+
+header {
+   padding: 5em 0 3em 0;
+   color: azure;
+   text-shadow: 1px 1px 10px black;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   background-color: rgb(151, 151, 151);
+   background-image: url(images/All-Mr.-Olympia-Winners.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-position: 100% 35%;
+}
+
+header h1 {
+   font-size: 3.4rem;
+   margin: auto;
+   font-family: "Uncial Antiqua", system-ui;
+   font-weight: 600;
+   font-style: normal;
+   /* font-family: "Almendra SC", serif;
+   font-weight: 700;
+   font-style: normal; */
+   /* font-family: "Rubik Distressed", system-ui;
+   font-weight: 500;
+   font-style: normal; */
+   /* text-transform: uppercase; */
+}
+
+header img {
+   max-width: 300px;
+}
+
+h2 {
+   font-size: 2rem;
+   border-bottom: 2px solid red;
+   margin-bottom: 1rem;
+   text-shadow: 1px 1px 2px rgb(231, 159, 159);
+}
+
+h3 {
+   font-size: 1.5rem;
+   margin-top: 1em;
+   text-shadow: 1px 1px 1px rgb(236, 201, 0);
+}
+
+
+.about {
+   line-height: 1.4;
+   padding: 1rem 2rem;
+   border: 5px solid#474747;
+}
+
+/* grid for the index page division pictures */
+
+.divisions {
+   /* font-size: 115%; */
+   line-height: 1.4;
+   padding: 1rem 2rem;
+   border: 5px solid#474747;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+}
+
+figcaption {
+   text-align: center;
+}
+
+.large-box {
+   grid-column: span 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   max-width: 100%;
+}
+
+.large-box img {
+   display: block;
+   max-width: 800px;
+   max-width: 100%;
+}
+
+.winners {
+   line-height: 1.4;
+   padding: 1rem 2rem;
+   border: 5px solid#474747;
+}
+
+ul {
+   padding-left: 2rem;
+}
+
+/* This is for the fading winners */
+.hideme {
+   opacity: 0;
+}
+
+footer {
+   background-color: #474747;
+   padding: 0.75rem;
+   text-align: center;
+   color: white;
+   font-size: 80%;
+   font-style: italic;
+   line-height: 2rem;
+}
+
+footer a {
+   text-decoration: none;
+   font-size: 100%;
+   color: white;
+}
+
+footer a:hover {
+   color: #DE1A1A;
+   text-shadow: 0 0 5px white;
+}
+
+
+
+/* All of the footer social media styling */
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+
+.social-btns .btn .fa {
+  transform: scale(0.8);
+}
+
+
+
+/* Instagram
+-------------------------------------*/
+.social-btns .btn.instagram:before {
+  background-color: #bf00ff; /* hover color */
+}
+
+.social-btns .btn.instagram .fa {
+  color: #bf00ff; /* logo color */
+}
+
+
+
+/* CONTAINER AREA
+-------------------------------------*/
+
+.social-btns { /* area that holds buttons */
+  font-size: 0;
+  text-align: center;
+  max-width: 100%;
+}
+
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.social-btns .btn {
+  display: inline-block;
+  background-color: white;
+  width: 3rem; /* size of buttons */
+  height: 3rem; /* size of buttons */
+  margin: 1px 10px; /* space between buttons */
+  line-height: 3rem; /* vertical placement inside button */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+  opacity: 0.99;
+}
+
+.social-btns .btn:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.social-btns .btn .fa {
+  font-size: 2rem; /*size of logo inside button */
+  vertical-align: middle;
+}
+
+
+
+@media (max-width: 768px) {
+
+   .grids,
+   .divisions {
+      grid-template-columns: 1fr;
+   }
+
+   .grids {
+      gap: 0;
+   }
+
+   .wrapper {
+      margin: 0 0.5rem;
+   }
+
+   .grids {
+      grid-template-columns: 1fr;
+
+   }
+
+   header img {
+      max-width: 100%;
+      /* Responsive logo */
+   }
+
+   header {
+      font-size: 100%;
+   }
+
+   .divisions {
+      display: flex;
+      flex-direction: column;
+   }
+
+   p,
+   nav,
+   li,
+   figcaption {
+      font-size: 85%;
+   }
+
+   header h1 {
+      font-size: 2.5rem;
+   }
+
+   h2 {
+      font-size: 1.8rem;
+   }
+
+   h3 {
+      font-size: 1.3rem;
+   }
+}
